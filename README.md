@@ -190,9 +190,6 @@ want certainty.
 - **Jurisdiction.** Laws vary by country and state. This repo is the tool, not
   legal cover.
 
-The repo is currently **private** — a deliberate choice. Sharing publicly is a
-larger surface area; if you do, it's worth at least the conversations above.
-
 ## No warranty, no guarantees, no support
 
 Released under the **MIT License** (see [`LICENSE`](LICENSE)) — i.e. provided

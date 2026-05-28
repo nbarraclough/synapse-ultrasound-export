@@ -5,6 +5,8 @@ video loops — from a **Synapse Mobility** web viewer that has no export button
 Everything runs on-device in your own authenticated browser session. Nothing is
 uploaded.
 
+<img width="3316" height="2466" alt="CleanShot 2026-05-28 at 08 52 19@2x" src="https://github.com/user-attachments/assets/7f547760-fea5-44ca-9f82-e450a94d6f37" />
+
 ---
 
 ## What it is
@@ -42,6 +44,8 @@ on the right day, in order.
 Synapse Mobility is built on **PureWeb pixel-streaming**: the images are rendered on
 the server and streamed to your browser, so there's no image file sitting in the
 page to "save as." Two different paths get the pixels out:
+
+<img width="740" height="1514" alt="CleanShot 2026-05-28 at 08 53 41@2x" src="https://github.com/user-attachments/assets/540396bf-76dc-48a0-ae5c-5b60a7362956" />
 
 **Images — DICOM render proxy.** The viewer has a REST endpoint that renders any
 series to a JPEG at a requested size:

@@ -130,6 +130,20 @@ viewer-selector caveats if Fujifilm changes the UI.
   rendered copy, not the original DICOM. For diagnostic-grade originals, your imaging
   facility can release the source DICOMs.
 
+## No warranty, no guarantees, no support
+
+Released under the **MIT License** (see [`LICENSE`](LICENSE)) — i.e. provided
+**as is**, with **no warranty of any kind**. To say it without legalese:
+
+- It might break tomorrow if Fujifilm changes Synapse Mobility's UI.
+- It might not work in your environment, your viewer, or your browser version.
+- It is **not** a medical device and has **no** clinical certification — don't
+  use it for clinical decision-making.
+- Nobody is obligated to fix it, answer questions, or accept changes.
+
+Use it on your own scans, at your own risk. Issues and PRs are welcome but
+there's no commitment to review them.
+
 ## Acknowledgements
 Built in a single session with **Claude** (Anthropic). The collaboration — including
 every wrong turn and fix — is documented in [JOURNEY.md](JOURNEY.md).

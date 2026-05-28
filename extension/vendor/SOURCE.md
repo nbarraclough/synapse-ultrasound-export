@@ -22,5 +22,18 @@ We drive the core **directly in the offscreen page's main thread** (no
 `chrome-extension://` URL. The core gets its `.wasm` path via the
 `mainScriptUrlOrBlob` `#hash` convention. See `../offscreen.js`.
 
-License: ffmpeg.wasm is MIT; the underlying FFmpeg is LGPL/GPL. See
-https://github.com/ffmpegwasm/ffmpeg.wasm.
+## License & attribution
+
+`@ffmpeg/core` (these two files) is **LGPL-2.1-or-later** — see
+[`LICENSE-LGPL-2.1.txt`](LICENSE-LGPL-2.1.txt) in this directory. The full text
+of that license applies to **the bundled `ffmpeg-core.js` and `ffmpeg-core.wasm`
+only**; the rest of this repository is MIT-licensed (see top-level `LICENSE`).
+
+- SPDX-License-Identifier (these files): `LGPL-2.1-or-later`
+- Corresponding source code and build instructions:
+  https://github.com/ffmpegwasm/ffmpeg.wasm (the `@ffmpeg/core` package)
+- The underlying FFmpeg sources used to build the core are LGPL'd and available
+  from https://ffmpeg.org/ and the ffmpeg.wasm repository above.
+
+No modifications have been made to either bundled file — they are the unmodified
+UMD build of `@ffmpeg/core@0.12.10` as fetched from jsDelivr.

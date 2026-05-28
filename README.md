@@ -130,6 +130,34 @@ viewer-selector caveats if Fujifilm changes the UI.
   rendered copy, not the original DICOM. For diagnostic-grade originals, your imaging
   facility can release the source DICOMs.
 
+## Things to think about before sharing it
+
+This isn't legal advice — just a list of the considerations worth weighing if you
+plan to share it beyond yourself (especially publicly). Talk to a lawyer if you
+want certainty.
+
+- **Viewer Terms of Service.** Your imaging provider's portal likely has terms
+  that may restrict automated access, scraping, or reverse engineering. Worth a
+  read, and worth more thought if you'd be distributing this to non-patients.
+- **Use case.** Using it on **your own** medical records (or those of someone
+  you're legally authorized to act for) sits in a very different place than using
+  it on data you weren't given access to. This project is built for the former.
+- **Patient data.** Nothing patient-identifying is in this repo (the `.gitignore`
+  blocks media, manifests, and `.har` files), and the code contains no hardcoded
+  identifiers. If you fork or extend it, keep that boundary.
+- **Third-party licensing.** Most of the repo is MIT (see [`LICENSE`](LICENSE)).
+  The bundled `extension/vendor/ffmpeg-core.{js,wasm}` files are **LGPL-2.1**
+  — see [`extension/vendor/SOURCE.md`](extension/vendor/SOURCE.md) and
+  [`extension/vendor/LICENSE-LGPL-2.1.txt`](extension/vendor/LICENSE-LGPL-2.1.txt)
+  for attribution and a pointer to the corresponding sources.
+- **Clinical use.** This is **not** a medical device, has no clinical
+  certification, and must not be used for clinical decision-making.
+- **Jurisdiction.** Laws vary by country and state. This repo is the tool, not
+  legal cover.
+
+The repo is currently **private** — a deliberate choice. Sharing publicly is a
+larger surface area; if you do, it's worth at least the conversations above.
+
 ## No warranty, no guarantees, no support
 
 Released under the **MIT License** (see [`LICENSE`](LICENSE)) — i.e. provided

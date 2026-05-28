@@ -1,13 +1,41 @@
-# Ultrasound Export
+<h1 align="center">Ultrasound Export</h1>
 
-Export **your own** ultrasound scans — full-resolution images and date-stamped
-video loops — from a **Synapse Mobility** web viewer that has no export button.
-Everything runs on-device in your own authenticated browser session. Nothing is
-uploaded.
+<p align="center">
+  Get <b>your own</b> ultrasound scans out of a <b>Synapse Mobility</b> viewer that has no export button.<br>
+  Full-resolution images and date-stamped video loops — entirely on-device, in the browser tab you've already signed into.
+</p>
 
-<img width="3316" height="2466" alt="CleanShot 2026-05-28 at 08 52 19@2x" src="https://github.com/user-attachments/assets/7f547760-fea5-44ca-9f82-e450a94d6f37" />
+<p align="center">
+  <img width="780" alt="Ultrasound Export hero" src="https://github.com/user-attachments/assets/7f547760-fea5-44ca-9f82-e450a94d6f37" />
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
+  <img alt="Chrome MV3" src="https://img.shields.io/badge/Chrome-MV3-4285F4?logo=googlechrome&logoColor=white" />
+  <img alt="ffmpeg.wasm 0.12" src="https://img.shields.io/badge/ffmpeg.wasm-0.12-007808" />
+  <img alt="On-device" src="https://img.shields.io/badge/on--device-yes-success" />
+  <img alt="No uploads" src="https://img.shields.io/badge/uploads-none-success" />
+  <a href="JOURNEY.md"><img alt="Built with Claude" src="https://img.shields.io/badge/built%20with-Claude-D97757" /></a>
+</p>
 
 ---
+
+> [!NOTE]
+> This tool is for retrieving **your own** scans — or scans you're legally
+> authorized to access. See [Things to think about before sharing it](#things-to-think-about-before-sharing-it).
+
+## Highlights
+
+- 🖼️ **All scan images in one click** — full-res JPGs with the scan date in EXIF
+- 🎞️ **Cine loops as MP4** — trimmed to one clean cycle, `creation_time` set
+- 🤖 **Hands-free auto-drive** through every clip in the study
+- 🩺 **On-device only** — your browser, your session, no servers, no uploads
+- 📅 **Photos-friendly dates** — files drop into Google/Apple Photos on the right day, in order
+
+> [!WARNING]
+> **Not a medical device.** This isn't certified for clinical use, has no
+> diagnostic warranty, and must not be used for clinical decision-making.
+> For diagnostic-grade originals, ask your imaging facility for the source DICOMs.
 
 ## What it is
 
@@ -36,16 +64,15 @@ on the right day, in order.
 - **On-device & private.** No server, no upload, no third party — it works inside the
   viewer tab you've already logged into.
 
-> This is for retrieving **your own** scans (or scans you're authorized to access).
-> See [Privacy & ethics](#privacy--ethics).
-
 ## How it works
 
 Synapse Mobility is built on **PureWeb pixel-streaming**: the images are rendered on
 the server and streamed to your browser, so there's no image file sitting in the
 page to "save as." Two different paths get the pixels out:
 
-<img width="740" height="1514" alt="CleanShot 2026-05-28 at 08 53 41@2x" src="https://github.com/user-attachments/assets/540396bf-76dc-48a0-ae5c-5b60a7362956" />
+<p align="center">
+  <img width="300" alt="Ultrasound Export panel" src="https://github.com/user-attachments/assets/540396bf-76dc-48a0-ae5c-5b60a7362956" />
+</p>
 
 **Images — DICOM render proxy.** The viewer has a REST endpoint that renders any
 series to a JPEG at a requested size:
@@ -74,6 +101,13 @@ Full play-by-play of the design, the dead ends, and the fixes is in
 
 ## Repository layout
 
+The **extension is the product**; start there. The console snippets and Python/shell
+scripts are kept alongside because they document the path to the extension and remain
+handy with zero install.
+
+<details>
+<summary>Show the full file tree</summary>
+
 ```
 extension/              ← the main product (a Chrome MV3 extension)
   manifest.json
@@ -93,10 +127,7 @@ scripts / snippets (optional, for power users):
 JOURNEY.md              how this was built, tested, and debugged
 .gitignore              keeps ALL retrieved media & identifiers out of the repo
 ```
-
-The console snippets (`01`/`02`) and the Python/shell scripts are kept because they
-document the path to the extension and remain handy with zero install — but the
-**extension is the product**; start there.
+</details>
 
 ## Quick start
 

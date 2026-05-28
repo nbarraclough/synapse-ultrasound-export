@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Synapse Mobility Exporter",
+  "version": "1.1",
+  "description": "Export full-resolution stills and date-stamped cine-loop MP4s from Synapse Mobility (for your own scans).",
+  "permissions": ["offscreen"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://fujicollaboration.co.ihc.com/viewer*",
+        "https://*.ihc.com/viewer*",
+        "https://*.intermountain.net/viewer*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}

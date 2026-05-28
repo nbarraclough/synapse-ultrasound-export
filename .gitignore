@@ -1,0 +1,30 @@
+# ─────────────────────────────────────────────────────────────────────────
+# Patient media & PII — NEVER commit. This repo is the TOOL, not the data.
+# ─────────────────────────────────────────────────────────────────────────
+# Retrieved media (contains burned-in patient identifiers)
+stills/
+cine-webm/
+cine-mp4/
+frames/
+*.mp4
+*.webm
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Capture artifacts that embed study/patient identifiers
+*.har
+*_manifest.json
+stills_manifest.json
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Keep the bundled ffmpeg core (needed for the extension to run).
+# It is binary but small (~31MB) and intentionally committed.
+!extension/vendor/ffmpeg-core.wasm
+!extension/vendor/ffmpeg-core.js
